@@ -130,3 +130,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# diagrams
+**/*.dot
+**/*.png
+**/*.pdf
+# exlude current uml diagram
+!/media/Current_UML.png
+
+#mac
+.DS_Store
