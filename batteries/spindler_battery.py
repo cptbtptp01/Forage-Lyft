@@ -1,14 +1,14 @@
-from datetime import datetime
+import utils
 
-from battery import Battery
+from batteries.battery import Battery
 
 class SpindlerBattery(Battery):
     
-    def __init__(self, last_service_date) -> None:
-        super().__init__(last_service_date)
+    def __init__(self, current_date, last_service_date) -> None:
+        self.current_date = current_date
         self.last_service_date = last_service_date
     
-    def battery_needs_service(self) -> bool:
-        service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 2)
+    def need_service(self) -> bool:
+        service_threshold_date = utils.add_years_to_date(self.last_service_date, 2)
         
-        return service_threshold_date < datetime.today().date()
+        return service_threshold_date < self.current_date
