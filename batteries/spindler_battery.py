@@ -1,4 +1,4 @@
-import utils
+import utils.utils as utils
 
 from batteries.battery import Battery
 
