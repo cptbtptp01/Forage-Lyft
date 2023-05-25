@@ -1,2 +1,2 @@
 # Lyft Back-End Engineering
-![Current_UML](media/LyftServiceArcihtecture-factoryMethod.drawio.png)
+![Current_UML](media/diagram_w_details.png)

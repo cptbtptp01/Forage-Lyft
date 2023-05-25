@@ -136,7 +136,7 @@ dmypy.json
 **/*.png
 **/*.pdf
 # exlude current uml diagram
-!/media/Current_UML.png
+!/media/diagram_w_details.png
 
 #mac
 .DS_Store
