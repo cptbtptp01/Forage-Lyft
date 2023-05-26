@@ -1,5 +1,11 @@
+# ensure that the parent directory is on the path
+import sys
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir)
+
 import unittest
-from datetime import datetime
 
 from engines.capulet_engine import CapuletEngine
 from engines.sternman_engine import SternmanEngine
@@ -43,3 +49,7 @@ class TestSternman(unittest.TestCase):
     
     def test_need_sevice(self):
         self.assertFalse(self.engine.need_service())
+
+if __name__ == '__main__':
+    # or run in command line: python -m unittest test.test_engine
+    unittest.main()

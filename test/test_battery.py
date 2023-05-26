@@ -1,3 +1,9 @@
+# ensure that the parent directory is on the path
+import sys
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+
 import unittest
 from datetime import datetime
 
@@ -33,3 +39,7 @@ class TestSpindler(unittest.TestCase):
     def test_not_need_service(self):
         self.battery.last_service_date = self.spinder_last_service_not_expire
         self.assertFalse(self.battery.need_service())
+
+if __name__ == '__main__':
+    # or run in command line: python -m unittest test.test_battery
+    unittest.main()
