@@ -6,4 +6,4 @@ class SternmanEngine(Engine):
         self.warning_light_on = warning_light_on
 
     def need_service(self):
-        return self.warning_light_is_on
+        return self.warning_light_on
